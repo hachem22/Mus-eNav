@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation du Musée</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .description {
+            margin-bottom: 30px;
+            color: #34495e;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            position: relative;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 12px;
+            background-color: #fff;
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 200px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transition: left 0.7s;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .btn-title {
+            font-weight: 700;
+        }
+
+        .btn-1 { background: linear-gradient(135deg, #67B26F 0%, #4ca2cd 100%); color: white; }
+        .btn-2 { background: linear-gradient(135deg, #3a7bd5 0%, #3a6073 100%); color: white; }
+        .btn-3 { background: linear-gradient(135deg, #c33764 0%, #1d2671 100%); color: white; }
+        .btn-4 { background: linear-gradient(135deg, #f46b45 0%, #eea849 100%); color: white; }
+        .btn-5 { background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); color: white; }
+        .btn-6 { background: linear-gradient(135deg, #fd746c 0%, #ff9068 100%); color: white; }
+        .btn-7 { background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%); color: white; }
+
+        footer {
+            margin-top: 50px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 80%;
+                max-width: 300px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue au Musée d'Art Moderne</h1>
+        
+        <p class="description">
+            Explorez notre musée à travers ses sept salles thématiques. Cliquez sur un bouton pour découvrir chaque espace unique de notre collection.
+        </p>
+        
+        <div class="buttons-container">
+            <a href="salle1.html" class="btn btn-1">
+                <div class="btn-icon">🖼️</div>
+                <div class="btn-title">Salle des Impressionnistes</div>
+            </a>
+            
+            <a href="salle2.html" class="btn btn-2">
+                <div class="btn-icon">🎭</div>
+                <div class="btn-title">Galerie Contemporaine</div>
+            </a>
+            
+            <a href="salle3.html" class="btn btn-3">
+                <div class="btn-icon">🗿</div>
+                <div class="btn-title">Sculptures Anciennes</div>
+            </a>
+            
+            <a href="salle4.html" class="btn btn-4">
+                <div class="btn-icon">📷</div>
+                <div class="btn-title">Photographie</div>
+            </a>
+            
+            <a href="salle5.html" class="btn btn-5">
+                <div class="btn-icon">🏺</div>
+                <div class="btn-title">Art Médiéval</div>
+            </a>
+            
+            <a href="salle6.html" class="btn btn-6">
+                <div class="btn-icon">🌍</div>
+                <div class="btn-title">Art du Monde</div>
+            </a>
+            
+            <a href="salle7.html" class="btn btn-7">
+                <div class="btn-icon">✨</div>
+                <div class="btn-title">Expositions Temporaires</div>
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 Musée d'Art Moderne - Tous droits réservés
+    </footer>
+</body>
+</html>
